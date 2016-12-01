@@ -1,0 +1,50 @@
+Rails:
+  Enabled: true
+
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - db/schema.rb
+    - db/migrate/*
+    - bin/*
+
+Metrics/LineLength:
+  Max: 100
+
+Documentation:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Exclude:
+    - 'spec/**/*'
+
+Style/AndOr:
+  Enabled: false
+
+Style/TrailingCommaInLiteral:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Style/CaseIndentation:
+  IndentWhenRelativeTo: end
+
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+Style/DotPosition:
+  EnforcedStyle: leading

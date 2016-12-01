@@ -1,24 +1,10 @@
-# README
+# Marketplacer Rollbar Reporter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hit up the Rollbar API, and report on counts of errors to Slack.
 
-Things you may want to cover:
+Cache numbers of errors in a db, so we can quickly report on changes over time.
 
-* Ruby version
+## Setup
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Git clone, bundle install
+* Run `gem install overcommit; overcommit --install`

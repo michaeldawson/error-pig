@@ -1,0 +1,10 @@
+PreCommit:
+  Reek:
+    enabled: true
+    command: ['bundle', 'exec', 'reek',  '-c', 'config/style_guides/reek.yml']
+    problem_on_unmodified_line: ignore
+  RuboCop:
+    enabled: true
+    command: ['bundle', 'exec', 'rubocop', '--rails', '--config', 'config/style_guides/rubocop.yml']
+    problem_on_unmodified_line: ignore
+    on_warn: fail
