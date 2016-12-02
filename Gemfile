@@ -14,6 +14,10 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
+group :test do
+  gem 'webmock'
+end
+
 group :production do
   gem 'pg'
 end
