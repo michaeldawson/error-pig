@@ -16,6 +16,8 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load
+
 module MarketplacerRollbarReporter
   class Application < Rails::Application
     # Only loads a smaller set of middleware suitable for API only apps.
