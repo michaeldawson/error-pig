@@ -5,7 +5,7 @@
 
 module WebMockHelpers
   SERVICES_MAP = {
-    rollbar_top_active_items: { url: %r{https://api.rollbar.com/api/1/reports/top_active_items} },
+    rollbar_occurrence_counts: { url: %r{https://api.rollbar.com/api/1/reports/occurrence_counts} },
   }.freeze
 
   # rubocop:disable Metrics/ParameterLists
