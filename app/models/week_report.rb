@@ -12,7 +12,16 @@ class WeekReport
   attr_reader :week_end
 
   def message
-    "This week, we had #{this_weeks_errors} errors, #{increase_or_decrease_message} last week's #{last_weeks_errors}. #{final_encouragement}"
+    [errors_message, final_encouragement, piggy_fact_message].compact.join("\n")
+  end
+
+  def errors_message
+    "Last week, we had #{this_weeks_errors} errors, #{delta_message} #{last_weeks_errors} the week before."
+  end
+
+  def piggy_fact_message
+    return unless piggy_fact.present?
+    "\n By the way, did you know... #{piggy_fact.fact}"
   end
 
   def this_weeks_errors
@@ -32,7 +41,9 @@ class WeekReport
     end
   end
 
-  def increase_or_decrease_message
+  # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
+  # Bite me. If this app becomes wildy profitable, I'll fix it.
+  def delta_message
     if this_weeks_errors > last_weeks_errors
       if percentage_difference > 25
         "a big increase of #{percentage_difference}% from"
@@ -60,5 +71,9 @@ class WeekReport
     else
       "Let's keep it up!"
     end
+  end
+
+  def piggy_fact
+    @piggy_fact ||= PiggyFact.best_fact
   end
 end

@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202041223) do
+ActiveRecord::Schema.define(version: 20161211212727) do
 
   create_table "day_error_counts", force: :cascade do |t|
     t.date     "day"
     t.integer  "error_count"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "piggy_facts", force: :cascade do |t|
+    t.text     "fact"
+    t.datetime "last_used"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
