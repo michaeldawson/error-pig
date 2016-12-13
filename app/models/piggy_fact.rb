@@ -1,3 +1,5 @@
+# Return some fascinating piggy facts.
+
 class PiggyFact < ApplicationRecord
   validates :fact, presence: true
 

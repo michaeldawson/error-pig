@@ -67,9 +67,9 @@ class WeekReport
 
   def final_encouragement
     if this_weeks_errors > last_weeks_errors
-      "Let's make next week a great one!"
+      Encouragement.negative
     else
-      "Let's keep it up!"
+      Encouragement.positive
     end
   end
 
