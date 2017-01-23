@@ -5,7 +5,7 @@ class Encouragement
     def negative
       [
         "Let's make next week a great one!",
-        "If there are even more next week, I'll squeal.",
+        'Oink.',
       ].sample
     end
 
@@ -13,6 +13,8 @@ class Encouragement
       [
         "Let's keep it up!",
         'Go team!',
+        'Huzzah!',
+        'Oink.',
       ].sample
     end
   end

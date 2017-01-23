@@ -10,7 +10,7 @@ facts = [
   "Domestic pigs have curly tails; wild pigs have straight tails. Personally, I style mine depending on how I'm feeling on the day.",
   'In the medical industry, pig hearts are often used as replacements for human hearts.',
   '"A pig in the poke" comes from a common trick in 17th-century England of trying to give away a cat to an unsuspecting "shopper" for a suckling pig (a young pig). When the buyer opened the poke (sack), he "let the cat out of the bag," and the trick was revealed.',
-  'The Spanish explorer Hernando DeSoto brought the first pigs to the New World in 1539. A hero in the truest sense of the word.',
+  'The Spanish explorer Hernando DeSoto brought the first pigs to the New World in 1539. A true hero.',
 ]
 
 facts.each { |fact| PiggyFact.create!(fact: fact) }
